@@ -1,0 +1,12 @@
+README
+
+Files:
+
+in_game_prediction_model.py:
+This file makes a live in-game win predcition, based on various play-by-play occurrences, such as made shots, missed shots, rebounds, turnovers, and free throws. In order to run the code, you need to look in the excel sheet look at the row number and add 1 to it, and set that as your game number. You need to set it at lines: 31, 128 and 141. I have some example game numbers in comments on lines 32-38. This will then print out a graph of the win percentage model on those games.
+
+linear_regression_coeffcient.py:
+This file computes the linear regression coefficent for my win percentage equation. I use multi varibale linear regression, and spits out three numbers for my equation of ax + by + c = win percentage. Where x = time, and y = point difference. The program also prints out a line of best fit for the linear regression. It also prints three histograms, to measure games won, games lost, and total games all at particular point differences.
+
+win_probability_predictor.py:
+This file essentially mimics the functionality of this link (https://stats.inpredictable.com/nba/wpCalc.php). The program will ask for 4 inputs. First it will ask for time on the game clock in minutes, it should be a value from 0-12. Then it will ask you for the time in game in seconds, which should be a value from 0-60. Then it will ask you for a point difference, which should be negative if the away team is winning, and positive if the home team is winning. Then it will ask for the quarter, which should be a value from 1-4. Based on those 4 inputs, the program will print a projected win percentage given those parameters.
